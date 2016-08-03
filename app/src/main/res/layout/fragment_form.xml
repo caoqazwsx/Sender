@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhao.sender.fragment.FormFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/system">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="配送订单"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/form_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RadioButton
+                android:id="@+id/form_sort_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按时间排列"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/form_sort_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按距离排列"/>
+        </RadioGroup>
+
+        <com.zhao.sender.custom.DownUpListView
+            android:id="@+id/list_newforms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false">
+        </com.zhao.sender.custom.DownUpListView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
